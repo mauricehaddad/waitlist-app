@@ -1,15 +1,11 @@
-// Supabase credentials
 const SUPABASE_URL = 'https://vrjaagjafzlkntdrqsuw.supabase.co'
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZyamFhZ2phZnpsa250ZHJxc3V3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg1NjIzMjIsImV4cCI6MjA3NDEzODMyMn0.We8rwTSHSOschZxP1nmu8K34KvWU3UtuFElo99qc4Ag'
 
-// Initialize Supabase client (from CDN)
 const supabase = Supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
-// Form elements
 const form = document.getElementById('signup-form')
 const status = document.getElementById('status')
 
-// Handle form submission
 form.addEventListener('submit', async (e) => {
   e.preventDefault()
   const name = form.elements['name'].value

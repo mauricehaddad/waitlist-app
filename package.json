@@ -2,22 +2,14 @@
   "name": "waitlist-app",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mauricehaddad/waitlist-app.git"
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "parcel": "^2.16.0"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/mauricehaddad/waitlist-app/issues"
-  },
-  "homepage": "https://github.com/mauricehaddad/waitlist-app#readme",
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4"
   }

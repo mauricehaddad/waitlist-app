@@ -1,10 +1,9 @@
-import { createClient } from '@supabase/supabase-js'
-
-// Your Supabase URL and anon key
+// No import statement needed when using the CDN
 const SUPABASE_URL = 'https://vrjaagjafzlkntdrqsuw.supabase.co'
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZyamFhZ2phZnpsa250ZHJxc3V3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg1NjIzMjIsImV4cCI6MjA3NDEzODMyMn0.We8rwTSHSOschZxP1nmu8K34KvWU3UtuFElo99qc4Ag'
 
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+// Use the global Supabase object from the CDN
+const supabase = Supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
 const form = document.getElementById('signup-form')
 const status = document.getElementById('status')

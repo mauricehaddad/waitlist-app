@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const { data, error } = await supabase
       .from('signups')
       .insert([{ name, email }])
+    console.log({ data, error }) // always log for debugging
 
     if (error) {
       console.error(error)
@@ -29,3 +30,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 })
+n

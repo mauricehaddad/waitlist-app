@@ -1,11 +1,11 @@
 import { createClient } from '@supabase/supabase-js'
 
 // Supabase credentials
-const SUPABASE_URL = 'https://vrjaagjafzlkntdrqsuw.supabase.co'
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZyamFhZ2phZnpsa250ZHJxc3V3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg1NjIzMjIsImV4cCI6MjA3NDEzODMyMn0.We8rwTSHSOschZxP1nmu8K34KvWU3UtuFElo99qc4Ag'
 
-// Initialize Supabase client
-const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+import { createClient } from '@supabase/supabase-js'
+const supabaseUrl = 'https://vrjaagjafzlkntdrqsuw.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('signup-form')

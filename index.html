@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Waitlist App</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waitlist Signup</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Join Our Waitlist</h1>
-    <form name="signup" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="signup">
-  <input type="text" name="name" placeholder="Your name" required />
-  <input type="email" name="email" placeholder="Your email" required />
-  
-  <button type="submit">Join</button>
-</form>
+  <h1>Join the Waitlist</h1>
+  <form id="signup-form">
+    <input type="text" name="name" placeholder="Your name" required />
+    <input type="email" name="email" placeholder="Your email" required />
+    <button type="submit">Join</button>
+  </form>
+  <p id="status"></p>
 
-<p id="status"></p>
-  </div>
-  <script src="script.js"></script>
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.37.0/dist/supabase.min.js"></script>
+  <!-- Your front-end JS -->
+  <script src="script.js" type="module"></script>
 </body>
 </html>
